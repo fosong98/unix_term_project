@@ -39,7 +39,7 @@ void print_file(FILE* stream) {
 
     fprintf(stream, "%d\n", count);
 
-    while (temp != _tail) {
+    while (temp != NULL) {
         fprintf(stream, "%s\n", temp->data);
         temp = temp->prev;
     }
@@ -51,6 +51,7 @@ void clear() {
     while (c->next != NULL)
         c = delete_node(t);
     _cur_node = NULL;
+    printf("LinkedList is cleared!\n");
 }
 
 Node* append_left(size_t n, char new_data[n]) {
@@ -146,7 +147,6 @@ Node* delete_node(Node* cur_node) {
 }
 
 Node* delete(char* data) {
-    printf("in delete()\n");
     Node* temp = first();
     while (temp != NULL) {
         if (!strcmp(temp->data, data)) {
