@@ -47,9 +47,10 @@ void print_file(FILE* stream) {
 
 void clear() {
     Node* c = first();
-    Node* t;
+    if (c == NULL)
+        return;
     while (c->next != NULL)
-        c = delete_node(t);
+        c = delete_node(c);
     _cur_node = NULL;
     printf("LinkedList is cleared!\n");
 }
