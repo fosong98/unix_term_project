@@ -1,5 +1,13 @@
 # unix_term_project
 
+## 프로그램 실행
+```make playerTest``` 명령어를 실행하면 build 폴더 아래에 실행 파일이 생성됩니다.<br/>
+생성된 실행파일을 실행하시면 아래의 명령어를 이용할 수 있습니다.
+
+![image](https://user-images.githubusercontent.com/79358032/171801587-5d810c09-abc5-475c-b5a1-58a03e5b143b.png)
+
+
+
 ## make 명령어
 
 ### make listTest
