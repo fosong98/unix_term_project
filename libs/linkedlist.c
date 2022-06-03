@@ -48,6 +48,8 @@ void print_file(FILE* stream) {
 void clear() {
     Node* c = first();
     Node* t;
+    if (c == NULL)
+        return;
     while (c->next != NULL)
         c = delete_node(t);
     _cur_node = NULL;

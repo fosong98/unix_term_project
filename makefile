@@ -16,6 +16,7 @@ $(BUILD)/$(listTest_target): $(listTest_obj)
 	$(CC) -g $^ -o $@
 
 $(listTest_obj): | $(BUILD)
+$(ioTest_obj): | $(BUILD)
 
 $(BUILD):
 	mkdir $(BUILD)
@@ -30,8 +31,8 @@ $(BUILD)/linkedlist.o: $(LIB)/linkedlist.c
 $(BUILD)/$(ioTest_target): $(ioTest_obj)
 	$(CC) $^ -o $@
 $(BUILD)/ioTest.o: $(TEST)/ioTest.c
-	$(CC) $(CC) -c $^ -o $@
-$(BUILD)/textfilewriter.o : $(BUILD)/textfilewriter.c
+	$(CC) -c $^ -o $@
+$(BUILD)/textfilewriter.o : $(LIB)/textfilewriter.c
 	$(CC) -c $^ -o $@
 
 
